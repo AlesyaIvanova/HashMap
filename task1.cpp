@@ -17,8 +17,11 @@ private:
     const size_t fullness_coef = 2;
     const size_t resize_coef = 2;
     size_t sz = 0;
+
+    typedef std::pair<KeyType, iterator> PointerType;
+
     std::list<std::pair<const KeyType, ValueType> > data;
-    std::vector<std::vector<std::pair<KeyType, iterator> > > buckets;
+    std::vector<std::vector<PointerType> > buckets;
     Hash hasher;
 
     size_t get_bucket(const KeyType& key) const {
