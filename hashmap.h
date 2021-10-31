@@ -82,7 +82,7 @@ public:
         }
     }
 
-	HashMap& operator=(const HashMap& other) {
+    HashMap& operator=(const HashMap& other) {
     	if (this == &other)
             return (*this);
         clear();
